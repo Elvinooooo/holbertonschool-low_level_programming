@@ -9,13 +9,13 @@
 
 int main(void)
 {
-	char string[] = "and that piece of art is useful\"- Dora Korpar,\
+	char str[] = "and that piece of art is useful\"- Dora Korpar,\
 			2015-10-19\n";
 	int i;
 
 	for (i = 0; i <= 58; i++)
 	{
-		putchar(string[i]);
+		putchar(str[i]);
 	}
 
 	return (1);
