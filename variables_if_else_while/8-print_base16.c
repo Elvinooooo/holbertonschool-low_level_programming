@@ -12,10 +12,9 @@ int main(void)
 	int i = 0;
 	char c = 'a';
 
-	while (i < 10)
+	for (; i < 10; i++)
 	{
 		putchar('0' + i);
-		i++;
 	}
 	while (c <= 'f')
 	{
