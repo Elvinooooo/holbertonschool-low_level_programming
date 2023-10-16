@@ -2,7 +2,7 @@
 /**
 * main - Entry point of the program
 *
-*Description: This function prints all possible different combinations of two
+*Description: This function prints all possible different combinations of three
 *digits separated by comma and whitespace using only putchar method five times
 *
 * Return: 0 to indicate successful execution.
