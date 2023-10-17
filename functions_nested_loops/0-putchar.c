@@ -7,7 +7,7 @@
  *
  * Return: Always 0 (Success)
  */
-main(void)
+main(int)
 {
 	_putchar('_');
 	putchar('p');
