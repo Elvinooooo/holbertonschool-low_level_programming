@@ -7,9 +7,11 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+
+void print_alphabet(void)
 {
-	int i = 'a';
+
+	char i = 'a';
 
 	while (i <= 'z')
 	{
@@ -17,5 +19,4 @@ int main(void)
 		i++;
 	}
 	_putchar('\n');
-	return (0);
 }
