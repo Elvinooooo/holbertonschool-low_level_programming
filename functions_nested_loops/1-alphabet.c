@@ -1,11 +1,9 @@
 #include "main.h"
 
 /**
- * main -  Entry Point of the program that mentions the function prototype
+ * print_alphabet - function prints albhabet letters followed by a new line
  *
- *Description: function prints _putchar, followed by a new line
- *
- * Return: Always 0 (Success)
+ * Return: void
  */
 
 void print_alphabet(void)
