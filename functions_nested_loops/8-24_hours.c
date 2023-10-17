@@ -1,10 +1,6 @@
 #include "main.h"
 /**
- * print_last_digit  - prints the last digit of a number...
- *
- *@a: The argument of the function to be checked
- *
- * Return: the value of the last digit
+ * jack_bauer  - prints the every minute of the day
  */
 
 void jack_bauer(void)
