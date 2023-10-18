@@ -7,20 +7,20 @@
 int main(void)
 {
 	int i;
-	int j = 0;
-	int k = 1;
-	int fibonacci;
+	long j = 0;
+	long k = 1;
+	long fibonacci;
 
 	for (i = 0; i < 50 ; i++)
 	{
 		fibonacci = k + j;
 		if (i == 0)
 		{
-			printf("%d", fibonacci);
+			printf("%ld", fibonacci);
 		}
 		else
 		{
-			printf(", %d", fibonacci);
+			printf(", %ld", fibonacci);
 		}
 		j = k;
 		k = fibonacci;
