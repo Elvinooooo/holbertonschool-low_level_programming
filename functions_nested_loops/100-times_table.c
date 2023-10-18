@@ -14,24 +14,25 @@ void print_times_table(int n)
 	else
 	{
 		int i = 0;
-		int j = 0;
-		int result;
 
 		for (; i <= n ; i++)
 		{
-			for (; j <= n; j++)
+		int j = 0;
+		int result;
+
+		for (; j <= n; j++)
+		{
+			result = i * j;
+			if (j == n)
 			{
-				result = i * j;
-				if (j == n)
-				{
-					printf("%d", result);
-				}
-				else
-				{
-					 printf("%d, ", result);
-				}
+				printf("%d", result);
 			}
-			printf("\n");
+			else
+			{
+				printf("%d, ", result);
+			}
+		}
+		printf("\n");
 		}
 	}
 }
