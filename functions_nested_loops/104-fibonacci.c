@@ -6,24 +6,38 @@
 */
 int main(void)
 {
+	unsigned long int j = 0;
+	unsigned long int k = 1;
+	unsigned long int l = 0;
+	unsigned long int m = 2;
+	unsigned long int fibonacci1;
+	unsigned long int fibonacci2;
+	unsigned long int fibonacci3;
 	int i;
-	unsigned long j = 0;
-	unsigned long k = 1;
-	unsigned long fibonacci;
 
-	for (i = 0; i < 98 ; i++)
+	printf("%lu, %lu, ", k, m);
+	for (i = 2; i < 98 ; i++)
 	{
-		fibonacci = k + j;
-		if (i == 0)
+		if (k + m > 10000000000 || l > 0 || j > 0)
 		{
-			printf("%lu", fibonacci);
+			fibonacci1 = (k + m) / 10000000000;
+			fibonacci2 = (k + m) % 10000000000;
+			fibonacci3 = j + l + fibonacci1;
+			j = l;
+			l = fibonacci3;
+			k = m;
+			m = fibonacci2;
+			printf("%lu%010lu", l, m);
 		}
 		else
 		{
-			printf(", %lu", fibonacci);
+			fibonacci2 =  k + m;
+			k = m;
+			m = fibonacci2;
+			printf("%lu", m);
 		}
-		j = k;
-		k = fibonacci;
+		if (i != 97)
+			printf(", ");
 	}
 	printf("\n");
 	return (0);
