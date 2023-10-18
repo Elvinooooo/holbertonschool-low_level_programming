@@ -29,7 +29,18 @@ void print_times_table(int n)
 			}
 			else
 			{
-				printf("%d, ", result);
+				if (result < 10 && (i * (j + 1)) < 10)
+				{
+					printf("%d,   ", result);
+				}
+				else if ((i * (j + 1)) >= 100)
+				{
+					printf("%d, ", result);
+				}
+				else
+				{
+					printf("%d,  ", result);
+				}
 			}
 		}
 		printf("\n");
