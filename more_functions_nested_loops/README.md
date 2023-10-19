@@ -1,2 +1,1 @@
-Here we will write the tasks "C - Functions, nested loops"
-
+Here we will write the tasks "C - MORE Functions, nested loops"
