@@ -6,13 +6,13 @@
 */
 int main(void)
 {
-	unsigned long int j = 0;
-	unsigned long int k = 1;
-	unsigned long int l = 0;
-	unsigned long int m = 2;
-	unsigned long int fibonacci1;
-	unsigned long int fibonacci2;
-	unsigned long int fibonacci3;
+	unsigned long j = 0;
+	unsigned long k = 1;
+	unsigned long l = 0;
+	unsigned long m = 2;
+	unsigned long fibonacci1;
+	unsigned long fibonacci2;
+	unsigned long fibonacci3;
 	int i;
 
 	printf("%lu, %lu, ", k, m);
