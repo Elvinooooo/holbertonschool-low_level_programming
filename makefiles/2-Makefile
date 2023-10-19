@@ -6,4 +6,4 @@ NAME=school
 all:${OBJ}
 
 $(OBJ): %.o: %.c
-	$(CC) -c -o ${OBJ} ${NAME}
+	$(CC) ${OBJ} -o ${NAME}
