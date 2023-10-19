@@ -4,4 +4,8 @@ OBJ=main.o school.o
 NAME:school
 
 all:${NAME}
+
+${NAME}:$(OBJ)
+
+$(OBJ): %.o: %.c
 	$(CC) -c -o ${OBJ} ${SRC}
