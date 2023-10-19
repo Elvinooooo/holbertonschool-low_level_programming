@@ -7,7 +7,7 @@ all: $(OBJ)
 	${CC} ${OBJ} -o ${NAME}	
 
 clean:
-	${RM} *~
+	${RM} *~ school
 
 oclean:
 	${RM} $(OBJ)
