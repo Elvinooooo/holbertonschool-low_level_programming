@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*square root -  function  that function to find the natural square root.
+*squareRoot -  function  that function to find the natural square root.
 *@n: the number that will be the square root
 *@i: the current value where should start finding
 *Return: -1 if n does not have a natural square root
