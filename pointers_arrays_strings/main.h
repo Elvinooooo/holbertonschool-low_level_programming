@@ -19,3 +19,4 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
 void set_string(char **s, char *to);
+char *rot13(char *);
