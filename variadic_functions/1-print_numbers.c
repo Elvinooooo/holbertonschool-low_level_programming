@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 /**
 *print_numbers - function that prints numbers followed by a new line
-*separator:the string to be printed between numbers
+*@separator:the string to be printed between numbers
 *@n:  the number of integers passed to the function
 *Return: nothing
 */
