@@ -1,44 +1,82 @@
 #include "variadic_functions.h"
-#include <stdio.h>
+
 /**
-*print_all -  function that prints anything.
-*@format: a list of types of arguments passed to the function
-*Return: nothing
-*/
+ * print_char - Prints a char
+ * @ap: Argument pointer
+ */
+void print_char(va_list ap)
+{
+	printf("%c", va_arg(ap, int));
+}
+
+/**
+ * print_integer - Prints an integer
+ * @ap: Argument pointer
+ */
+void print_integer(va_list ap)
+{
+	printf("%d", va_arg(ap, int));
+}
+
+/**
+ * print_float - Prints a float
+ * @ap: Argument pointer
+ */
+void print_float(va_list ap)
+{
+	printf("%f", va_arg(ap, double));
+}
+
+/**
+ * print_string - Prints a string
+ * @ap: Argument pointer
+ */
+void print_string(va_list ap)
+{
+	char *s = va_arg(ap, char *);
+
+	if (!s)
+	{
+		printf("(nil)");
+		return;
+	}
+		printf("%s", s);
+}
+
+/**
+ * print_all - Prints anything
+ * @format: Types of arguments passed to function
+ */
 void print_all(const char * const format, ...)
 {
+	print_type types[] = {
+		{"c", print_char},
+		{"i", print_integer},
+		{"f", print_float},
+		{"s", print_string},
+		{NULL, NULL}
+	};
+	va_list ap;
+	char *separator = "";
 	int i = 0;
-	va_list arguments;
-	const char *separator = "";
-	char *str;
+	int j = 0;
 
-	va_start(arguments, format);
+	va_start(ap, format);
 	while (format && format[i])
 	{
-		switch (format[i])
+		while (types[j].type)
 		{
-			case 'c':
-				printf("%s%s", separator, va_arg(arguments, char *));
-				break;
-			case 'i':
-				printf("%s%d", separator, va_arg(arguments, int));
-				break;
-			case 'f':
-				printf("%s%f", separator, va_arg(arguments, double));
-				break;
-			case 's':
-				str = va_arg(arguments, char *);
-				if (str == NULL)
-					str = "(nil)";
-				printf("%s%s", separator, str);
-				break;
-			default:
-				i++;
-				continue;
+			if (*types[j].type == format[i])
+			{
+				printf("%s", separator);
+				types[j].f(ap);
+				separator = ", ";
+			}
+			++j;
 		}
-		separator = ", ";
-		i++;
+		j = 0;
+		++i;
 	}
 	printf("\n");
-	va_end(arguments);
+	va_end(ap);
 }
