@@ -21,8 +21,8 @@ int get_bit(unsigned long int n, unsigned int index)
 		n /= 2;
 		i++;
 	} while (n > 0);
-	if (index < i)
-		result = binary[index];
+	if (index < binary_size)
+		result = binary[binary_size -  1 - index];
 	else
 		result = -1;
 	free(binary);
