@@ -15,12 +15,12 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	if (binary == NULL)
 		return (-1);
-	while (n > 0)
+	do
 	{
 		binary[i] =  n % 2;
 		n /= 2;
 		i++;
-	}
+	} while (n > 0);
 	if (index < i)
 		result = binary[index];
 	else
