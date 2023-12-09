@@ -7,9 +7,12 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int binary[128];
+	int *binary = malloc(sizeof(int) * (index + 1));
 	unsigned int i = 0;
+	int result;
 
+	if (binary == NULL)
+		return (-1);
 	while (n > 0)
 	{
 		binary[i] =  n % 2;
@@ -17,7 +20,8 @@ int get_bit(unsigned long int n, unsigned int index)
 		i++;
 	}
 	if (index < i)
-		return (binary[index]);
+		result = binary[index];
 	else
-		return (-1);
+		result = -1;
+	return (result);
 }
