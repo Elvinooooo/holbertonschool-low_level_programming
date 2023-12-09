@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 /**
  * get_bit - function that returns the value of a bit at a given index
@@ -8,23 +7,9 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int binary_size = sizeof(unsigned long int) * 8;
-	int *binary = malloc(sizeof(int) * binary_size);
-	unsigned int i = 0;
-	int result;
+	unsigned int size = sizeof(n) * 8 - 1;
 
-	if (binary == NULL)
+	if (index > size)
 		return (-1);
-	do
-	{
-		binary[i] =  n % 2;
-		n /= 2;
-		i++;
-	} while (n > 0);
-	if (index < i)
-		result = binary[i -  1 - index];
-	else
-		result = -1;
-	free(binary);
-	return (result);
+	return ((n >> index) & 1);
 }
