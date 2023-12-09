@@ -24,7 +24,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (index < i)
 		result = binary[index];
 	else
-		result = 0;
+		result = -1;
 	free(binary);
 	return (result);
 }
