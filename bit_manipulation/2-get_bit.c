@@ -8,7 +8,8 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int *binary = malloc(sizeof(int) * (index + 1));
+	unsigned int binary_size = sizeof(unsigned long int) * 8;
+	int *binary = malloc(sizeof(int) * binary_size);
 	unsigned int i = 0;
 	int result;
 
