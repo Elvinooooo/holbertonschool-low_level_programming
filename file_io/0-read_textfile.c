@@ -19,8 +19,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	fd1 = read(fd, buffer, letters);
 	fd2 = write(1, buffer, fd1);
-	if (fd == -1 || fd1 == -1 || fd2 == -1)
-	{	free(buffer);
+	if (fd == -1 || fd1 == -1 || fd2 == -1 || fd2 != fd1)
+	{
+		free(buffer);
 		return (0);
 	}
 	free(buffer);
