@@ -2,6 +2,18 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+ * print_and_exit - Print an error message to stderr and exit with a code
+ * @message: The error message format string
+ * @source: The source of the error (void pointer to handle any type)
+ * @exit_code: The exit code
+ */
+void print_and_exit(char *message, void *source, int exit_code)
+{
+	dprintf(STDERR_FILENO, message, source);
+	exit(exit_code);
+}
+
+/**
  *main - function that copies content from one file to another
  *@argc: number of arguments
  *@argv: the array of arguments
@@ -13,10 +25,7 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
+		print_and_exit("Usage: cp file_from file_to\n", NULL, 97);
 	open1 = open(argv[1], O_RDONLY);
 	if (open1 == -1)
 	{
