@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 		print_and_exit("Error: Can't read from file %s\n", atoi(argv[1]), 98);
 	}
 	if (close(open1) == -1)
-		print_and_exit("Error: Can't close fd%d\n", open1, 100);
+		print_and_exit("Error: Can't close fd\n", open1, 100);
 	if (close(open2) == -1)
 		print_and_exit("Error: Can't read from file %d\n", open2, 100);
 	return (0);
