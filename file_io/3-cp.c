@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	if (open2 == -1)
 	{
 		close(open1);
-		print_and_exit("Error: Can't write to file %s\n", argv[2], 99);
+		print_and_exit("Error: Can't write to %s\n", argv[2], 99);
 	}
 	while ((read1 = read(open1, buffer, 1024)) > 0)
 	{
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 		print_and_exit("Error: Can't read from file %s\n", argv[1], 98);
 	}
 	if (close(open1) == -1)
-		print_and_exit("Error: Can't close fd", NULL, 100);
+		print_and_exit("Error: Can't close fd ", NULL, 100);
 	if (close(open2) == -1)
 		print_and_exit("Error: Can't read from file %d\n", NULL, 100);
 	return (0);
