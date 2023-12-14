@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		{
 			close(open1);
 			close(open2);
-			print_and_exit("Error: Can't write to file %s\n", argv[2], 99);
+			print_and_exit("Error: Can't write to %s\n", argv[2], 99);
 		}
 	}
 	if (read1 == -1)
